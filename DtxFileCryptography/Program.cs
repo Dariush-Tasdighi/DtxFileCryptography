@@ -1,15 +1,4 @@
-﻿//namespace DtxFileCryptography
-//{
-//	class Program
-//	{
-//		static void Main()
-//		{
-//			System.Console.WriteLine("Hello, World!");
-//		}
-//	}
-//}
-
-namespace DtxFileCryptography
+﻿namespace DtxFileCryptography
 {
 	class Program
 	{
@@ -33,9 +22,33 @@ namespace DtxFileCryptography
 				return 3;
 			}
 
-			foreach (string arg in args)
+			//foreach (string arg in args)
+			//{
+			//	System.Console.WriteLine(arg);
+			//}
+
+			string sourcePath = args[0];
+			string targetPath = args[1];
+
+			if(System.IO.Directory.Exists(sourcePath) == false)
 			{
-				System.Console.WriteLine(arg);
+				System.Console.WriteLine("[sourcePath] does not exits!");
+				return 4;
+			}
+
+			if (System.IO.Directory.Exists(targetPath) == false)
+			{
+				System.Console.WriteLine("[targetPath] does not exits!");
+				return 5;
+			}
+
+			System.IO.DirectoryInfo sourceDirectoryInfo =
+				new System.IO.DirectoryInfo(path: sourcePath);
+
+			foreach(System.IO.FileInfo currentFileInfo in sourceDirectoryInfo.GetFiles())
+			{
+				//System.Console.WriteLine(currentFileInfo.Name);
+				System.Console.WriteLine(currentFileInfo.FullName);
 			}
 
 			return 0;
