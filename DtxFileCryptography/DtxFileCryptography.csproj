@@ -7,7 +7,7 @@
     <ProjectGuid>{12FB241B-25CA-492B-AFD9-D6286BEEC504}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>DtxFileCryptography</RootNamespace>
-    <AssemblyName>DtxFileCryptography</AssemblyName>
+    <AssemblyName>Copy</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DtxFileCryptography.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
